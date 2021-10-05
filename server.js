@@ -14,16 +14,7 @@ mongoose.connect(process.env.CONNECTIONSTRING)
 .catch((e) => {
     console.log(e);
 });
-// mongoose.connect(process.env.CONNECTIONSTRING,
-//     {
-//       useNewUrlParser: false,
-//       useUnifiedTopology: false,
-//       useFindAndModify: false
-//     })
-//     .then(() => {
-//       app.emit('pronto');
-//     })
-//     .catch(e => console.log(e));
+
 
 const session = require('express-session');
 const MongoStore = require('connect-mongo'); //salva as sessões na base de dados.

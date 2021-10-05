@@ -21,7 +21,7 @@
                 return;
             }
 
-            req.flash('success', "login efetuado com sucesso!");  
+            req.flash('success', "Usuario cadastrado com sucesso!");  
             req.session.save(function() {
             return res.redirect('back');
              });
@@ -61,9 +61,9 @@
         }
     };
 
-    exports.logout = (req,res) => {
+    exports.logout = function(req,res) {
         req.session.destroy();
         res.redirect('/');
-    }
+    };
   
     
